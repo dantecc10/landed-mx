@@ -1,5 +1,5 @@
 .main-background-color {
-  background-color: var(--main-color);
+  background-color: var(--main-color) !important;
 }
 
 :root {
@@ -10,5 +10,13 @@
 
 li.nav-item a, custom-font {
   font-family: var(--custom-font);
+}
+
+cw {
+  color: white !important;
+}
+
+.submain-background-color {
+  background-color: var(--submain-color);
 }
 
