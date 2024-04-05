@@ -2,21 +2,37 @@
   background-color: var(--main-color) !important;
 }
 
+.custom-font {
+  font-family: var(--custom-font) !important;
+}
+
 :root {
   --main-color: #182a3e;
   --submain-color: #0f3c59;
   --custom-font: 'Source Sans Pro Black', sans-serif;
+  --gradient-1: #103d5a;
+  --gradient-2: #14344d;
+  --color1: #1694ed;
+  --color2: #192b3f;
+}
+
+.color1 {
+  background-color: var(--color1) !important;
+}
+
+.color2 {
+  background-color: var(--color2) !important;
 }
 
 li.nav-item a, custom-font {
   font-family: var(--custom-font);
 }
 
-cw {
+.cw {
   color: white !important;
 }
 
 .submain-background-color {
-  background-color: var(--submain-color);
+  background-color: var(--submain-color) !important;
 }
 
