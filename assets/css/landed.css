@@ -1,0 +1,14 @@
+.main-background-color {
+  background-color: var(--main-color);
+}
+
+:root {
+  --main-color: #182a3e;
+  --submain-color: #0f3c59;
+  --custom-font: 'Source Sans Pro Black', sans-serif;
+}
+
+li.nav-item a, custom-font {
+  font-family: var(--custom-font);
+}
+
