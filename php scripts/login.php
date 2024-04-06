@@ -34,6 +34,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             $_SESSION['subscription_plan_id_student'] = $row['subscription_plan_id_student'];
             $_SESSION['age_student'] = $row['age_student'];
             $_SESSION['birth_student'] = $row['birth_student'];
+            $_SESSION['genre_student'] = $row['genre_student'];
             $_SESSION['about_me_student'] = $row['about_me_student'];
             $_SESSION['icon_img_student'] = $row['icon_img_student'];
             echo "Estudiante encontrado";
@@ -56,6 +57,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 $_SESSION['phone_number_educator'] = $row['phone_number_educator'];
                 $_SESSION['age_educator'] = $row['age_educator'];
                 $_SESSION['birth_educator'] = $row['birth_educator'];
+                $_SESSION['genre_educator'] = $row['genre_educator'];
                 $_SESSION['about_me_educator'] = $row['about_me_educator'];
                 $_SESSION['icon_img_educator'] = $row['icon_img_educator'];
                 echo "Educador encontrado";
