@@ -46,3 +46,8 @@ li.nav-item a, custom-font {
   color: white !important;
 }
 
+.custom-shadow {
+  color: var(--gradient-2) !important;
+  text-shadow: 5px 5px var(--color1) !important;
+}
+
