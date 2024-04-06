@@ -37,7 +37,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             $_SESSION['genre_student'] = $row['genre_student'];
             $_SESSION['about_me_student'] = $row['about_me_student'];
             $_SESSION['icon_img_student'] = $row['icon_img_student'];
-            echo "Estudiante encontrado";
+            #echo "Estudiante encontrado";
+            header("Location: ../");
         } else {
             echo "No hay un estudiante con esos datos";
             $sql = ("SELECT * FROM `educators` WHERE (`email_educator` = ? AND `password_educator` = ?);");
@@ -60,9 +61,10 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 $_SESSION['genre_educator'] = $row['genre_educator'];
                 $_SESSION['about_me_educator'] = $row['about_me_educator'];
                 $_SESSION['icon_img_educator'] = $row['icon_img_educator'];
-                echo "Educador encontrado";
+                #echo "Educador encontrado";
+                header("Location: ../");
             } else {
-                echo "No hay educador que coincida";
+                #echo "No hay educador que coincida";
                 #header("Location: ../login.php?error=true");
                 // Lógica de inicio de sesión para administradores (pendiente)
             }
