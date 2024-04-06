@@ -39,7 +39,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             echo "Estudiante encontrado";
         } else {
             echo "No hay un estudiante con esos datos";
-            $sql = ("SELECT * FROM `educators` WHERE (`email_student` = ? AND `password_student` = ?);");
+            $sql = ("SELECT * FROM `educators` WHERE (`email_educator` = ? AND `password_educator` = ?);");
             $stmt = $connection->prepare($sql);
             $stmt->bind_param("ss", $_POST['email'], $_POST['password']);
 
