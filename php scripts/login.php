@@ -24,6 +24,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             // El registro existe, obtener el valor del estado
             $row = $result->fetch_assoc();
             $_SESSION["logged"] = true;
+            $_SESSION['user'] = "student";
             $_SESSION['id_student'] = $row['id_student'];
             $_SESSION['name_student'] = $row['name_student'];
             $_SESSION['last_names_student'] = $row['last_names_student'];
@@ -37,7 +38,30 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             $_SESSION['icon_img_student'] = $row['icon_img_student'];
             echo "Estudiante encontrado";
         } else {
-            echo "Más de un usuario o ninguno";
+            echo "No hay un estudiante con esos datos";
+            $sql = ("SELECT * FROM `educators` WHERE (`email_student` = ? AND `password_student` = ?);");
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("ss", $_POST['email'], $_POST['password']);
+
+            if ($result->num_rows == 1) {
+                // El registro existe, obtener el valor del estado
+                $row = $result->fetch_assoc();
+                $_SESSION["logged"] = true;
+                $_SESSION['user'] = "educator";
+                $_SESSION['id_educator'] = $row['id_educator'];
+                $_SESSION['name_educator'] = $row['name_educator'];
+                $_SESSION['last_names_educator'] = $row['last_names_educator'];
+                $_SESSION['email_educator'] = $row['email_educator'];
+                //$_SESSION['password_educator'] = $row['password_educator'];
+                $_SESSION['phone_number_educator'] = $row['phone_number_educator'];
+                $_SESSION['age_educator'] = $row['age_educator'];
+                $_SESSION['birth_educator'] = $row['birth_educator'];
+                $_SESSION['about_me_educator'] = $row['about_me_educator'];
+                $_SESSION['icon_img_educator'] = $row['icon_img_educator'];
+                echo "Educador encontrado";
+            } else {
+                // Lógica de inicio de sesión para administradores (pendiente)
+            }
         }
     } else {
         echo "Error en la consulta";
