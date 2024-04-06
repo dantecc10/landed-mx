@@ -43,20 +43,36 @@
                 <form class="text-center color1 cw mx-5" action="php scripts/login.php" method="post" style="max-width: none;">
                     <div class="row">
                         <div class="col col-12 col-md-6">
-                            <div class="mb-3 text-start"><label class="form-label" for="">Nombre *</label><input class="form-control item" type="text" name="name_user" placeholder="¿Cómo te llamas?"></div>
+                            <div class="mb-3 text-start"><label class="form-label" for="">Nombre *</label><input class="form-control item" type="text" name="name" placeholder="¿Cómo te llamas?" required=""></div>
                         </div>
                         <div class="col col-12 col-md-6">
-                            <div class="mb-3 text-start"><label class="form-label" for="">Apellidos</label><input class="form-control item" type="text" name="last_names_user" placeholder="Escribe tus apellidos"></div>
+                            <div class="mb-3 text-start"><label class="form-label" for="">Apellidos *</label><input class="form-control item" type="text" name="last_names" placeholder="Escribe tus apellidos" required=""></div>
                         </div>
                     </div>
                     <div class="mb-3 text-start"><label class="form-label" for="">Label</label><input class="form-control item" type="text" name="" placeholder=""></div>
-                    <div class="mb-3 text-start"><label class="form-label" for="email">Correo electrónico *</label><input class="form-control item" type="email" id="email" name="email" placeholder="Indícanos tu email"></div>
+                    <div class="mb-3 text-start"><label class="form-label" for="">Teléfono</label><input class="form-control item" type="tel" name="phone_number" placeholder="Indica tu número telefónico (móvil, de preferencia)"></div>
+                    <div class="mb-3 text-start"><label class="form-label" for="email">Correo electrónico *</label><input class="form-control item" type="email" id="email" name="email" placeholder="Indícanos tu email" required=""></div>
                     <div class="row">
                         <div class="col col-12 col-md-6">
-                            <div class="mb-3 text-start"><label class="form-label" for="password">Contraseña *</label><input class="form-control" type="password" id="password" name="password" placeholder="Establece una contraseña"></div>
+                            <div class="mb-3 text-start"><label class="form-label" for="password">Contraseña *</label><input class="form-control" type="password" id="password" name="password" placeholder="Establece una contraseña" required=""></div>
                         </div>
                         <div class="col col-12 col-md-6">
-                            <div class="mb-3 text-start"><label class="form-label" for="password">Repite la contraseña *</label><input class="form-control" type="password" id="password-1" name="password" placeholder="Establece una contraseña"></div>
+                            <div class="mb-3 text-start"><label class="form-label" for="password">Repite la contraseña *</label><input class="form-control" type="password" id="password-2" name="password-2" placeholder="Confirma la contraseña" required=""></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-12 col-md-8">
+                            <div class="mb-3 text-start"><label class="form-label" for="password">Fecha de nacimiento *</label><input class="form-control" type="date" id="password-1" name="date" required=""></div>
+                        </div>
+                        <div class="col col-12 col-md-4">
+                            <div class="mb-3 text-start"><label class="form-label" for="password">Sexo *</label><select name="genre" class="form-select item">
+    <optgroup label="Seleccionar género">
+        <option value="0" selected>Selecciona</option>
+        <option value="1">Hombre</option>
+        <option value="2">Mujer</option>
+        <option value="3">Otro</option>
+    </optgroup>
+</select></div>
                         </div>
                     </div>
                     <div class="mb-3">
