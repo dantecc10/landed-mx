@@ -35,6 +35,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             $_SESSION['birth_student'] = $row['birth_student'];
             $_SESSION['about_me_student'] = $row['about_me_student'];
             $_SESSION['icon_img_student'] = $row['icon_img_student'];
+            echo "Estudiante encontrado";
         } else {
             echo "Más de un usuario o ninguno";
         }
