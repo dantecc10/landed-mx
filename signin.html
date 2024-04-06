@@ -40,9 +40,25 @@
                     <h1 class="text-info custom-font fw-bolder" style="font-weight: bold;--bs-body-font-weight: bold;">Registro</h1>
                     <p>Crea tu cuenta en LANDED MX</p>
                 </div>
-                <form class="text-center color1 cw" action="php scripts/login.php" method="post">
-                    <div class="mb-3 text-start"><label class="form-label" for="email">Email</label><input class="form-control item" type="email" id="email" name="email"></div>
-                    <div class="mb-3 text-start"><label class="form-label" for="password">Contraseña</label><input class="form-control" type="password" id="password" name="password"></div>
+                <form class="text-center color1 cw mx-5" action="php scripts/login.php" method="post" style="max-width: none;">
+                    <div class="row">
+                        <div class="col col-12 col-md-6">
+                            <div class="mb-3 text-start"><label class="form-label" for="">Nombre *</label><input class="form-control item" type="text" name="name_user" placeholder="¿Cómo te llamas?"></div>
+                        </div>
+                        <div class="col col-12 col-md-6">
+                            <div class="mb-3 text-start"><label class="form-label" for="">Apellidos</label><input class="form-control item" type="text" name="last_names_user" placeholder="Escribe tus apellidos"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3 text-start"><label class="form-label" for="">Label</label><input class="form-control item" type="text" name="" placeholder=""></div>
+                    <div class="mb-3 text-start"><label class="form-label" for="email">Correo electrónico *</label><input class="form-control item" type="email" id="email" name="email" placeholder="Indícanos tu email"></div>
+                    <div class="row">
+                        <div class="col col-12 col-md-6">
+                            <div class="mb-3 text-start"><label class="form-label" for="password">Contraseña *</label><input class="form-control" type="password" id="password" name="password" placeholder="Establece una contraseña"></div>
+                        </div>
+                        <div class="col col-12 col-md-6">
+                            <div class="mb-3 text-start"><label class="form-label" for="password">Repite la contraseña *</label><input class="form-control" type="password" id="password-1" name="password" placeholder="Establece una contraseña"></div>
+                        </div>
+                    </div>
                     <div class="mb-3">
                         <div class="form-check text-start"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Recordarme</label></div>
                     </div><button class="btn btn-primary" type="submit" style="font-size: 20px;--bs-body-font-weight: bold;">Iniciar sesión</button>
