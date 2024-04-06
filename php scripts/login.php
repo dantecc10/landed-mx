@@ -61,6 +61,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 echo "Educador encontrado";
             } else {
                 echo "No hay educador que coincida";
+                #header("Location: ../login.php?error=true");
                 // Lógica de inicio de sesión para administradores (pendiente)
             }
         }
