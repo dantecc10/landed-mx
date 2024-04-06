@@ -2,8 +2,9 @@
   background-color: var(--main-color) !important;
 }
 
-.main-background-color:hover {
+.main-background-color.custom-hoverable:hover {
   background-color: var(--submain-color) !important;
+  color: white !important;
 }
 
 .custom-font {
@@ -38,5 +39,10 @@ li.nav-item a, custom-font {
 
 .submain-background-color {
   background-color: var(--submain-color) !important;
+}
+
+.submain-background-color.custom-hoverable:hover {
+  background-color: var(--main-color) !important;
+  color: white !important;
 }
 
