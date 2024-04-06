@@ -2,6 +2,10 @@
   background-color: var(--main-color) !important;
 }
 
+.main-background-color:hover {
+  background-color: var(--submain-color) !important;
+}
+
 .custom-font {
   font-family: var(--custom-font) !important;
 }
