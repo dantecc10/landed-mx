@@ -60,6 +60,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 $_SESSION['icon_img_educator'] = $row['icon_img_educator'];
                 echo "Educador encontrado";
             } else {
+                echo "No hay educador que coincida";
                 // Lógica de inicio de sesión para administradores (pendiente)
             }
         }
