@@ -8,7 +8,7 @@ if ($connection->connect_error) {
 // Cerrar la conexión a la base de datos
 if (isset($_POST['email'])) {
     session_start();
-    $_SESSION['email'] = $email;
+    $_SESSION['email'] = $_POST['email'];
     // Crear consulta bind_param
     $sql = ("SELECT * FROM `students` WHERE (`email_student` = ?);");
     $stmt = $connection->prepare($sql);
