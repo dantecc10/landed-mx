@@ -34,7 +34,7 @@ if (isset($_POST['email'])) {
                 header("Location: ../signin.php?error=existent");
             } else {
                 #echo "No hay educador que coincida";
-                $sql = "INSERT INTO `students` VALUES('', ?, ?, ?, ?, ?, 0, ?, ?, ?, '');";
+                $sql = "INSERT INTO `students`  VALUES('', ?, ?, ?, ?, ?, 0, ?, ?, ?, '');";
                 $stmt = $connection->prepare($sql);
 
                 $birth = new DateTime($_POST['date']);
@@ -53,7 +53,7 @@ if (isset($_POST['email'])) {
                         break;
                 }
 
-                $stmt->bind_param("sssssiss", $_POST['name'], $_POST['last_names'], $_POST['email'], $_POST['password'], $_post['phone_number'], $age, $_POST['date'], $genre);
+                $stmt->bind_param("sssssiss", $_POST['name'], $_POST['last_names'], $_POST['email'], $_POST['password'], $_POST['phone_number'], $age, $_POST['date'], $genre);
                 if ($stmt->execute()) {
                     $_SESSION['verifier_id'] = $connection->insert_id;
                     header("Location: auth_key.php");
