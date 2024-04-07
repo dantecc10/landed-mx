@@ -22,7 +22,7 @@ if (isset($_POST['email'])) {
             #echo "Estudiante encontrado";
             header("Location: ../signin.php?error=existent");
         } else {
-            echo "No hay un estudiante con esos datos";
+            //echo "No hay un estudiante con esos datos";
             $sql = ("SELECT * FROM `educators` WHERE (`email_educator` = ?);");
             $stmt = $connection->prepare($sql);
             $stmt->bind_param("s", $_POST['email']);
