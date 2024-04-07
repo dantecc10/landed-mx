@@ -6,9 +6,7 @@ include_once "connection.php";
 
 if ($connection->connect_error) {
     die("La conexión a la base de datos falló: " . $connection->connect_error);
-} else {
-    echo ("Conexión establecida");
-}
+} # else { echo ("Conexión establecida");}
 
 // Cerrar la conexión a la base de datos
 if (isset($_POST['email']) && isset($_POST['password'])) {
