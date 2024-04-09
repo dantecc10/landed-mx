@@ -21,6 +21,9 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         if ($result->num_rows == 1) {
             // El registro existe, obtener el valor del estado
             $row = $result->fetch_assoc();
+            if ($row['status_student'] == 0) {
+                header("Location: ../login.html?access=denied");
+            }
             $_SESSION["logged"] = true;
             $_SESSION['user'] = "student";
             $_SESSION['id_student'] = $row['id_student'];
@@ -38,7 +41,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             #echo "Estudiante encontrado";
             header("Location: ../");
         } else {
-            echo "No hay un estudiante con esos datos";
+            #echo "No hay un estudiante con esos datos";
             $sql = ("SELECT * FROM `educators` WHERE (`email_educator` = ? AND `password_educator` = ?);");
             $stmt = $connection->prepare($sql);
             $stmt->bind_param("ss", $_POST['email'], $_POST['password']);
