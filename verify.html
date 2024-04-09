@@ -36,8 +36,8 @@
     </nav>
     <main class="page login-page">
         <section class="clean-block clean-form dark color2">
-            <div class="container custom-font">
-                <div class="block-heading cw">
+            <div class="container custom-font submain-background-color">
+                <div class="block-heading cw mb-2">
                     <p>Autenticación en dos factores</p>
                     <h1 class="text-info custom-font fw-bolder" style="font-weight: bold;--bs-body-font-weight: bold;">Ingresa el código enviado</h1>
                     <p>Revisa el spam</p>
@@ -51,9 +51,14 @@
                                     </svg></div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col text-center"><input type="number" class="col-1 px-3 rounded-5 my-2 mx--1 mx-md-2 mx-lg-3 text-center" onchange="javascript:change_input(this);" max="9" style="min-height: 50px; min-width: 45px !important;" maxlength="1"><input type="number" class="col-1 px-3 rounded-5 my-2 mx--1 mx-md-2 mx-lg-3 text-center" onchange="javascript:change_input(this);" max="9" style="min-height: 50px; min-width: 45px !important;" maxlength="1"><input type="number" class="col-1 px-3 rounded-5 my-2 mx--1 mx-md-2 mx-lg-3 text-center" onchange="javascript:change_input(this);" max="9" style="min-height: 50px; min-width: 45px !important;" maxlength="1"><input type="number" class="col-1 px-3 rounded-5 my-2 mx--1 mx-md-2 mx-lg-3 text-center" onchange="javascript:change_input(this);" max="9" style="min-height: 50px; min-width: 45px !important;" maxlength="1"><input type="number" class="col-1 px-3 rounded-5 my-2 mx--1 mx-md-2 mx-lg-3 text-center" onchange="javascript:change_input(this);" max="9" style="min-height: 50px; min-width: 45px !important;" maxlength="1"><input type="number" class="col-1 px-3 rounded-5 my-2 mx--1 mx-md-2 mx-lg-3 text-center" onchange="javascript:change_input(this);" max="9" style="min-height: 50px; min-width: 45px !important;" maxlength="1"></div>
-                        </div>
+                        <form class="p-3" style="border: none;background-color: var(--bs-border-color-translucent);max-width: inherit;">
+                            <div class="row">
+                                <div class="col text-center d-inline-flex justify-content-center"><input class="form-control col-1 px-3 rounded-5 my-2 mx-1 mx-md-2 mx-lg-3 text-center" type="number" onchange="javascript:change_input(this);" max="9" style="min-height: 50px; min-width: 45px !important; max-width: 10%;" maxlength="1" required=""><input class="form-control col-1 px-3 rounded-5 my-2 mx-1 mx-md-2 mx-lg-3 text-center" type="number" onchange="javascript:change_input(this);" max="9" style="min-height: 50px;min-width: 45px !important;max-width: 10%;" maxlength="1" required=""><input class="form-control col-1 px-3 rounded-5 my-2 mx-1 mx-md-2 mx-lg-3 text-center" type="number" onchange="javascript:change_input(this);" max="9" style="min-height: 50px;min-width: 45px !important;max-width: 10%;" maxlength="1" required=""><input class="form-control col-1 px-3 rounded-5 my-2 mx-1 mx-md-2 mx-lg-3 text-center" type="number" onchange="javascript:change_input(this);" max="9" style="min-height: 50px;min-width: 45px !important;max-width: 10%;" maxlength="1" required=""><input class="form-control col-1 px-3 rounded-5 my-2 mx-1 mx-md-2 mx-lg-3 text-center" type="number" onchange="javascript:change_input(this);" max="9" style="min-height: 50px;min-width: 45px !important;max-width: 10%;" maxlength="1" required=""><input class="form-control col-1 px-3 rounded-5 my-2 mx-1 mx-md-2 mx-lg-3 text-center" type="number" onchange="javascript:change_input(this);" max="9" style="min-height: 50px;min-width: 45px !important;max-width: 10%;" maxlength="1" required=""></div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-center"><button class="btn btn-primary color1 rounded-2" type="submit">Verificar</button></div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
