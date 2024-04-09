@@ -34,7 +34,7 @@ if (isset($_POST['email'])) {
                 header("Location: ../signin.php?error=existent");
             } else {
                 #echo "No hay educador que coincida";
-                $sql = "INSERT INTO `students` VALUES('', ?, ?, ?, ?, ?, '0', ?, ?, ?, '');";
+                $sql = "INSERT INTO `students` VALUES('', ?, ?, ?, ?, ?, '0', ?, ?, ?, '', 0);";
                 $stmt = $connection->prepare($sql);
 
                 $birth = new DateTime($_POST['date']);
