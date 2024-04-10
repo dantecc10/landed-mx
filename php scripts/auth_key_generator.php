@@ -5,7 +5,7 @@ if (isset($_GET['verifier'])) {
     $email = $_GET['email'];
 } else {
     $email = $_SESSION['email'];
-    $verifier = $_SESSION['verifier'];
+    $verifier = $_SESSION['verifier_id'];
 }
 function generateKey($verifier)
 { // Operative ✅
