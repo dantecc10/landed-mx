@@ -35,7 +35,7 @@ if (isset($_POST['email'])) {
             } else {
                 #echo "No hay educador que coincida";
                 //$sql = "INSERT INTO `students` VALUES('', ?, ?, ?, ?, ?, '0', ?, ?, ?, '', 0);";
-                $sql = "INSERT INTO `students` VALUES('', ?, ?, ?, ?, ?, 0, ?, ?, ?, '', '', 0);";
+                $sql = "INSERT INTO `students` (`id_student`, `name_student`, `last_names_student`, `email_student`, `password_student`, `phone_number_student`, `subscription_plan_id_student`, `age_student`, `birth_student`, `gender_student`, `about_me_student`, `icon_img_student`) VALUES('', ?, ?, ?, ?, ?, 0, ?, ?, ?, '', '', 0);";
 
                 $stmt = $connection->prepare($sql);
 
