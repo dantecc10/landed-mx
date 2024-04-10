@@ -20,7 +20,7 @@ function generateKey($verifier)
     include_once "connection.php";
 
     $key_compare = $auth_key;
-    $sql = "SELECT * FROM `auth_keys` WHERE ((`content_auth_key` = '$key_compare') OR (`related_account_key` = $verifier)) AND (`status_key` = 0);";
+    $sql = "SELECT * FROM `auth_keys` WHERE ((`content_auth_key` = $key_compare) OR (`related_account_key` = $verifier)) AND (`status_key` = 0);";
     $result = $connection->query($sql);
 
     if ($result->num_rows > 0) {
