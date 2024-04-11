@@ -23,12 +23,12 @@ function generateKey($verifier)
     $sql = "SELECT * FROM `auth_keys` WHERE ((`content_auth_key` = $key_compare) OR (`related_account_key` = $verifier)) AND (`status_key` = 0);";
     $result = $connection->query($sql);
 
-    if ($result->num_rows > 0) {
-        $connection->close();
-        return null;
-    } else {
+    if ($result->num_rows == 0) {
         $connection->close();
         return $auth_key;
+    } else {
+        $connection->close();
+        return null;
     }
 }
 
