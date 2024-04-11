@@ -17,7 +17,7 @@ function generateKey($verifier)
     //$auth_key = 486753; // Debug 🐞
 
     // Importar la conexión
-    include_once "connection.php";
+    include "connection.php";
 
     $key_compare = intval($auth_key);
     $sql = "SELECT * FROM `auth_keys` WHERE ((`content_auth_key` = $key_compare) OR (`related_account_key` = $verifier)) AND (`status_key` = 0);";
