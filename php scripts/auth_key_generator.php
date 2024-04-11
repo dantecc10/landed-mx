@@ -32,7 +32,7 @@ function generateKey($verifier)
     }
 }
 
-$auth_key = generateKey($email);
+$auth_key = generateKey($_SESSION['verifier_id']);
 $contador = 0;
 while ($contador < 5) {
     //echo "Esto no se debería ver"; // Debug 🐞
