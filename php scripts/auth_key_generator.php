@@ -45,7 +45,7 @@ while ($contador < 5) {
         $sql = "INSERT INTO `auth_keys` VALUES ('', ?, ?, 0, CURRENT_TIMESTAMP())";
         $stmt = $connection->prepare($sql);
         // Limpiar y vincular los parámetros
-        $stmt->bind_param("si", $auth_key, $verifier);
+        $stmt->bind_param("si", $auth_key, $verify);
         #$clean_email = $connection->real_escape_string($email); //$clean_password = mysqli_real_escape_string($connection, $password);
         // Ejecutar la sentencia preparada
         $stmt->execute();
