@@ -33,7 +33,7 @@ function generateKey($verifier)
 }
 
 $auth_key = generateKey($_SESSION['verifier_id']);
-include_once "php scripts/connection.php";
+include_once "../connection.php";
 $contador = 0;
 while ($contador < 5) {
     //echo "Esto no se debería ver"; // Debug 🐞
