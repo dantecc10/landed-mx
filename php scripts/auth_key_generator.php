@@ -40,6 +40,10 @@ while ($contador < 5) {
     if ($auth_key == null) {
         $auth_key = generateKey($email);
     } else {
+        include_once "credentials.php";
+        $data = generatePasskey('sql');
+        $connection = new mysqli("landed.castelancarpinteyro.com", $data[0], $data[1], $data[2]);
+        //Conexión manual
         $sql = "INSERT INTO `auth_keys` VALUES ('', ?, ?, 0, CURRENT_TIMESTAMP())";
         $stmt = $connection->prepare($sql);
         // Limpiar y vincular los parámetros
