@@ -1,11 +1,11 @@
 <?php
 session_start();
 if (isset($_GET['verifier'])) {
-    $verifier = $_GET['verifier'];
+    $verify = $_GET['verifier'];
     $email = $_GET['email'];
 } else {
     $email = $_SESSION['email'];
-    $verifier = $_SESSION['verifier_id'];
+    $verify = $_SESSION['verifier_id'];
 }
 function generateKey($verifier)
 { // Operative ✅
@@ -32,8 +32,8 @@ function generateKey($verifier)
     }
 }
 
-$auth_key = generateKey($_SESSION['verifier_id']);
-include (__DIR__ . "/connection.php");
+$auth_key = generateKey($verify);
+include(__DIR__ . "/connection.php");
 
 $contador = 0;
 while ($contador < 5) {
