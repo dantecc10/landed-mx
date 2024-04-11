@@ -60,6 +60,7 @@ if (isset($_POST['email'])) {
                 $stmt->bind_param("sssssiss", $_POST['name'], $_POST['last_names'], $_POST['email'], $_POST['password'], $_POST['phone_number'], $age, $_POST['date'], $genre);
                 if ($stmt->execute()) {
                     $_SESSION['verifier_id'] = $connection->insert_id;
+                    echo ($_SESSION['verifier_id']);
                     header("Location: auth_key_generator.php");
                 } else {
                     header("Location: ../signin.php?error=true");
