@@ -65,6 +65,7 @@ while ($contador < 5) {
         break;
     }
     $contador++;
+    echo('Cuenta');
 }
 if ($contador == 5) {
     # code...
