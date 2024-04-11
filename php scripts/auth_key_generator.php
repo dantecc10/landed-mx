@@ -39,7 +39,7 @@ $contador = 0;
 while ($contador < 5) {
     //echo "Esto no se debería ver"; // Debug 🐞
     if ($auth_key == null) {
-        $auth_key = generateKey($email);
+        $auth_key = generateKey($verify);
     } else {
         //Conexión manual
         $sql = "INSERT INTO `auth_keys` VALUES ('', ?, ?, 0, CURRENT_TIMESTAMP())";
